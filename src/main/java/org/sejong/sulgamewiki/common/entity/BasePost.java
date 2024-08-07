@@ -32,7 +32,7 @@ import org.sejong.sulgamewiki.member.domain.entity.Member;
 @AllArgsConstructor
 @SuperBuilder
 @DiscriminatorColumn(name = "dtype")
-public abstract class BasePost extends BaseEntity {
+public abstract class BaseTimePost extends BaseTimeEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
