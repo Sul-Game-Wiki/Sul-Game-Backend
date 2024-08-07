@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @MappedSuperclass
-public abstract class BaseTimeMember extends BaseTimeEntity {
+public abstract class BaseMember extends BaseTimeEntity {
 
 
     @Column(unique = true)

@@ -26,7 +26,7 @@ import org.sejong.sulgamewiki.common.entity.constants.MediaType;
 @SuperBuilder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class BaseTimeMedia extends BaseTimeEntity {
+public class BaseMedia extends BaseTimeEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,5 +44,5 @@ public class BaseTimeMedia extends BaseTimeEntity {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "post_id", nullable = false)
-  private BaseTimePost basePost;
+  private BasePost basePost;
 }
