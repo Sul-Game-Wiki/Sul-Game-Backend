@@ -12,6 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import org.sejong.sulgamewiki.common.entity.BaseTimeEntity;
 import org.sejong.sulgamewiki.common.entity.BasePost;
 import org.sejong.sulgamewiki.member.domain.entity.Member;
 
@@ -20,7 +21,7 @@ import org.sejong.sulgamewiki.member.domain.entity.Member;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Entity
-public class LikedMember {
+public class LikedMember extends BaseTimeEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
