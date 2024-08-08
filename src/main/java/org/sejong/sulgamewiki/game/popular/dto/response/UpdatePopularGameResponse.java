@@ -2,10 +2,12 @@ package org.sejong.sulgamewiki.game.popular.dto.response;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 import org.sejong.sulgamewiki.game.popular.domain.entity.PopularGame;
 
 @Getter
 @Builder
+@ToString
 public class UpdatePopularGameResponse {
   private long popularGameId;
   private String title;
