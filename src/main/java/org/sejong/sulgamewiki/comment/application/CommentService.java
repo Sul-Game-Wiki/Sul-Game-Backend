@@ -1,6 +1,6 @@
 package org.sejong.sulgamewiki.comment.application;
 
-import java.util.Optional;
+
 import lombok.RequiredArgsConstructor;
 import org.sejong.sulgamewiki.comment.CommentException.CommentErrorCode;
 import org.sejong.sulgamewiki.comment.CommentException.CommentException;
