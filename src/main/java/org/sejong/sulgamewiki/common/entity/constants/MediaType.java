@@ -1,5 +1,8 @@
 package org.sejong.sulgamewiki.common.entity.constants;
 
+import static org.sejong.sulgamewiki.common.exception.GlobalErrorCode.MIME_TYPE_NOT_FOUNT;
+
+import org.sejong.sulgamewiki.common.exception.GlobalException;
 import org.springframework.web.multipart.MultipartFile;
 
 public enum MediaType {
@@ -23,18 +26,18 @@ public enum MediaType {
     return mimeType;
   }
 
-  public static MediaType fromMimeType(String mimeType) {
+  public static MediaType getMimeType(String mimeType) {
     for (MediaType type : values()) {
       if (type.getMimeType().equals(mimeType)) {
         return type;
       }
     }
-    throw new IllegalArgumentException(
-        "No enum constant for MIME type " + mimeType);
+    throw new GlobalException (
+        MIME_TYPE_NOT_FOUNT);
   }
 
   public static MediaType getMediaType(MultipartFile file) {
-    return MediaType.fromMimeType(file.getContentType());
+    return MediaType.getMimeType(file.getContentType());
   }
 
 }

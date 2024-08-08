@@ -16,7 +16,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.sejong.sulgamewiki.common.entity.BaseEntity;
+import org.sejong.sulgamewiki.common.entity.BaseTimeEntity;
 import org.sejong.sulgamewiki.member.domain.entity.Member;
 
 @Entity
@@ -26,7 +26,7 @@ import org.sejong.sulgamewiki.member.domain.entity.Member;
 @AllArgsConstructor
 @ToString
 @Builder
-public class Comment extends BaseEntity {
+public class Comment extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

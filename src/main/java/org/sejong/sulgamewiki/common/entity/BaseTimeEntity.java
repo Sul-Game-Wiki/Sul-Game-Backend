@@ -18,7 +18,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners(AuditingEntityListener.class)
 @Getter
 @NoArgsConstructor
-public abstract class BaseEntity {
+public abstract class BaseTimeEntity {
 
   @CreatedDate
   @Column(nullable = false, updatable = false)

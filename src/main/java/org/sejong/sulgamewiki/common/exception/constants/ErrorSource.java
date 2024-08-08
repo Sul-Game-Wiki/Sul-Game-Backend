@@ -11,5 +11,6 @@ public enum ErrorSource {
     NOTI,
     MEMBER,
     ADMIN,
+    LIKE,
     OTHERS;
 }

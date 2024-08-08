@@ -26,7 +26,7 @@ import org.sejong.sulgamewiki.common.entity.constants.MediaType;
 @SuperBuilder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class BaseMedia extends BaseEntity {
+public class BaseMedia extends BaseTimeEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
