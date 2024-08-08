@@ -31,11 +31,12 @@ public class LikeController {
 
   @PostMapping("/cancel/{basePostId}")
   @Operation(description = "좋아요 취소")
-  public ResponseEntity<UpdateLikeResponse> downLike(
-      @PathVariable Long popularGameId,
-      @AuthenticationPrincipal CustomUserDetails customUserDetails
+  public ResponseEntity<UpdateLikeResponse> cancelLike(
+      @PathVariable Long basePostId,
+      Long memberId
+      //@AuthenticationPrincipal CustomUserDetails customUserDetails
   ) {
-    UpdateLikeResponse response = likeService.downLike(popularGameId, customUserDetails.getMember().getId());
+    UpdateLikeResponse response = likeService.cancelLike(basePostId, memberId);
     return ResponseEntity.ok(response);
   }
 }
