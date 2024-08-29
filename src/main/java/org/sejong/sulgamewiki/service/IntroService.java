@@ -31,7 +31,6 @@ public class IntroService {
   private final MemberRepository memberRepository;
   private final BasePostRepository basePostRepository;
   private final BaseMediaService baseMediaService;
-  private final S3Service s3Service;
 
   public BasePostDto createIntro(BasePostCommand command) {
 
